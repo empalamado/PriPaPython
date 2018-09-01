@@ -1,0 +1,74 @@
+#                Converção entre float e int
+
+#Às vezes, um programa pode precisar converter entre valores de ponto flutuante e inteiros. Um programa pode fazer isso 
+#usando a função int. Para fazer isso, usamos a versão da função int que aceita uma string como entrada:
+
+i = int('25')
+
+#Se a função int for fornecida com uma string contendo um número, ela irá ler esse número fora da string. 
+#Em outras palavras, a declaração acima resultará na variável i contendo o valor inteiro 25.
+#Programas também podem usar a função int para converter um valor de ponto flutuante em inteiro
+
+a = int('2.9')   #Isso resultaria na criação de uma variável inteira chamada i que contém o valor 2
+i = int('25')    #Você pode perguntar por que o valor se i não foi arredondado para 3, porque parece razoável “arredondar”
+print( i+ a)     #um valor para o inteiro mais próximo. No entanto, nesse aspecto, o Python não é razoável. 
+27               #Valores de ponto flutuante são sempre truncados. Em outras palavras, a parte fracionária é sempre descartada.
+
+
+CALCULANDO UMA ENCOMENDA DE PIZZA
+
+Você poderia se perguntar porque eu precisaria converter valores de ponto flutuante em inteiros?. 
+
+Aqui está um exemplo:    Pesquisas indicam que exatamente 1,5 pessoa no mundo consome pizza. 
+                         Em outras palavras, entre 3 pessoas consomem 2 pizzas e assim por diante.
+
+Escrevi um programa que determina quantas pizzas eu precisaria pedir, dado um determinado número de pessoas. 
+O programa lê o número de pessoas, calcula e imprime o resultado. 
+
+Pizza Order Calculator 
+
+peoples_text = input('How many peoples: ')        Obtém o número de pessoas como string
+peoples_int = int(peoples_text)                   Converte o text para float
+pizza_count = peoples_int/1.5                     Calcular o número de pizza necessário 
+
+print('Você precisa de', pizza_count, 'pizzas')   Imprime o resultado
+
+Se eu disser que há 30 pessoas, o programa me dirá que preciso de 20 pizzas. 
+No entanto, existem problemas com alguns números de pizzas:
+
+E se eu disser que há 40 pessoas, começa a dar problemas.O resultado dará 26.666666666666668 pizzas.
+
+Eu não posso pedir 26.6 pizzas, então, eu preciso converter esse número para um INT(inteiro). 
+Também devo decidir o que a conversão fará. Se apenas usarmos a introdução no resultado acima, 
+isso resultará na ordem de 26 pizzas, porque a função INT trunca o valor de FLOAT(ponto flutuante). 
+Isso significa que eu vou comprar pizzas para apenas 39 pessoas em vez de 40, deixando umA com fome.
+
+Existem várias maneiras de resolver esse problema. Eu acho que a melhor maneira é adicionar uma pizza
+extra ao pedido para cuidar de qualquer “peça de reposição”.
+
+pizza_count = (peoples_int/1.5)+1  # Aí a soma ficaria assim:
+
+Quantas pessoas: 40
+Você precisa de 27.666666666666668 pizzas
+
+Como programador nunca assuma que você sabe o que um programa deve fazer
+
+Se você escreveu a calculadora de pizza para um cliente, não deve decidir por si mesmo o que o 
+programa deve fazer se precisar pedir uma fração de pizza. Seu cliente pode ficar feliz em "arredondar" 
+o número de pizzas para manter seus custos baixos. Se este for o caso, eles irão reclamar quando seu 
+programa adicionar uma pizza extra. Você deve sempre perguntar ao cliente. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
