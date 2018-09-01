@@ -42,5 +42,43 @@ from __future__ import division
 #Você deve dar este comando no início de um programa para fazer a divisão do Python 2 se comportar
 #da mesma maneira que a divisão do Python 3.
 
+#Acima, eu acabei de dizer que dividir um inteiro por um inteiro produz um resultado de ponto flutuante. 
+#Isso é verdade na versão 3.6 do Python que estamos usando neste livro. 
+#No entanto, no Python 2.7, o resultado da divisão de um inteiro por um inteiro é outro inteiro.
+
+#A função float também pode ser usada para converter um valor inteiro em um valor de ponto flutuante. 
+#Isso pode ser útil em programas Python mais antigos, como uma forma de forçar o comportamento correto do operador de divisão
+
+z = float(1)      #Nessa declaração, a variável z será do tipo float, mesmo que o valor atribuído seja um inteiro.
+                  #O comportamento do float pode parecer bastante familiar. 
+#Isso ocorre porque ele se comporta de maneira semelhante à função int, exceto pelo fato de fornecer resultados de ponto flutuante.
+
+z = float(234)
+print(z)
+234.0
+#----------------------------------------------------------------------
+2 + 3 * 4 -1 + 3 (2 + 3) * 4
+'''
+Essas expressões são avaliadas pelo Python trabalhando da esquerda para a direita, exatamente como você as lê. 
+Assim como na matemática tradicional, multiplicação e divisão são realizadas primeiro, seguidas de adição e subtração.
+
+O Python atinge essa ordem dando a cada operador uma prioridade. 
+Quando funciona uma expressão, ele encontra todos os operadores com a prioridade mais alta e os aplica primeiro. 
+Em seguida, ele procura os operadores próximos em prioridade e assim por diante, até que o resultado seja obtido. 
+
+Se você quiser forçar a ordem na qual uma expressão é avaliada, você pode colocar parênteses em torno dos elementos 
+da expressão que deseja avaliar primeiro, como no exemplo final acima. 
+Você também pode colocar parênteses entre parênteses, se quiser - desde que tenha tantos parênteses de abertura quanto 
+os de fechamento. '''
+
+a = 1 
+b = 2 
+c = a + b   # total = 3
+c = c * (a + b) #Primeiro somar a + b por estar entre colchetes e depois multiplica por c dando um total de 9
+b = a + b + c #a = 1, b = 2, c = 9, dando um total de 12
+
+
+
+
 
 
