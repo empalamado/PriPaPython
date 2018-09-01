@@ -1,0 +1,18 @@
+Clima e pressões
+
+Converter de Fahrenheit para centígrado é ainda mais útil se você realmente tiver alguns dados meteorológicos
+para trabalhar. A função snaps denominada get_weather_temp retorna a temperatura de um local. 
+Você deve fornecer o método com a latitude e longitude do local para o qual deseja a temperatura. 
+Aqui está um exemplo que obtém a temperatura para Itajaí - sc
+
+Município: Itajaí 
+Estado: Santa Catarina Região: Região Sul 
+Latitude: 26º 54’ 28” S 
+Longitude: 48º 39’ 43” W
+
+# EZ4-05 itajaí Temperatura
+import snaps  #Import the snaps library
+
+temp = snaps.get_weather_temp(latitude=26.54, longitude=-148.39)
+
+print('A temperatura em Itajaí é:', temp) #Print the temperature
