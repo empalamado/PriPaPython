@@ -1,4 +1,4 @@
-#                Converção entre float e int
+#                Converção entre float e int e entre INT e FLOAT
 
 #Às vezes, um programa pode precisar converter entre valores de ponto flutuante e inteiros. Um programa pode fazer isso 
 #usando a função int. Para fazer isso, usamos a versão da função int que aceita uma string como entrada:
@@ -58,7 +58,30 @@ programa deve fazer se precisar pedir uma fração de pizza. Seu cliente pode fi
 o número de pizzas para manter seus custos baixos. Se este for o caso, eles irão reclamar quando seu 
 programa adicionar uma pizza extra. Você deve sempre perguntar ao cliente. 
 
+CONVERTER GRAUS FAHRENHEIT EM CENTÍGRADOS
 
+Para converter uma temperatura de Fahrenheit para centígrado, você subtrai 32 do valor de Fahrenheit 
+e divide o resultado por 1,8. Você poderia escrever um programa para realizar esse cálculo. 
+Se você observar o programa de pedidos de pizza acima, descobrirá que já tem a maior parte do programa escrito. 
+Você só precisa alterar as mensagens que o programa exibe e as instruções que executam o cálculo.
+
+Agora você pode escrever qualquer tipo de programa de conversão que desejar, convertendo polegadas em metros, 
+gramas em onças ou litros em galões.
+
+Para converter graus Celsius em graus Fahrenheit, multiplique por 1,8 e adicione 32 = °F = °C × 1, 8 + 32
+
+Para converter graus Fahrenheit em graus Celsius, 
+subtraia 32 e divida por      1,8 = °C = (°F − 32)/ 1, 8
+    você subtrai 32 do valor de Fahrenheit e divide o resultado por 1,8.
+ 
+F = 75
+C =(F-32)/1.8
+#C =(75−32)/1.8
+#C =43 ÷ 1, 8
+#C =23.88888888888889
+print('75º F=',C,'ºC')
+RESULTADO:
+75º F= 23.88888888888889 ºC
 
 
 
